@@ -135,6 +135,7 @@ const Categories = () => {
                         <div className='d-flex justify-content-between align-items-center w-25 mt-2'>
                           {elements}
                         </div>
+                        <p>Stock: {datas.stok}</p>
                       </div>
                     </Link>
                   </div>
