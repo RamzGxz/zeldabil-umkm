@@ -19,6 +19,7 @@ const Categories = () => {
       if (resp.status === 200) {
         setData(resp.data.data)
         setMeta(resp.data.meta.pagination)
+        console.log(data)
       } else {
         alert('failed to fetch')
       }
@@ -49,7 +50,7 @@ const Categories = () => {
             </div>
 
             <div className='row py-3 mb-1'>
-              {data.map(item => {
+              {data && data.map(item => {
                 const datas = item.attributes
                 let i = 0
                 const elements = []
