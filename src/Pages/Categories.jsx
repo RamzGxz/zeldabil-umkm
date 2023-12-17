@@ -56,7 +56,6 @@ const Categories = () => {
                   elements.push(<i className="fa-solid fa-star" style={{ color: Colors.yellow }}></i>)
                 }
                 const foto = datas.foto.data
-                // console.log(foto.attributes.formats.small.url)
                 return (
                   <div className='col col-6 p-1'>
                     <Link to={`/details/data/${datas.kategori.data.attributes.nama}/${item.id}`} className='card w-100 shadow border-0 bg-body-tertiary text-decoration-none'>
@@ -104,7 +103,7 @@ const Categories = () => {
             </div>
 
             <div className='row py-3 mb-1'>
-              {data.map(item => {
+              {data && data.map(item => {
                 const datas = item.attributes
                 let i = 0
                 const elements = []
