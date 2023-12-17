@@ -89,11 +89,7 @@ const Categories = () => {
                   </div>
                 )
               })}
-
-
             </div>
-
-
           </div>
         ) : (
           <div className='w-100'>
