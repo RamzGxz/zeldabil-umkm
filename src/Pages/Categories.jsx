@@ -17,8 +17,10 @@ const Categories = () => {
     try {
       const resp = await axios.get(`http://localhost:1337/api/produks?populate=*&filters[kategori][nama][$eq]=${catNames}`)
       if (resp.status === 200) {
-        setData(resp.data.data)
-        setMeta(resp.data.meta.pagination)
+        setTimeout(() => {
+          setData(resp.data.data)
+          setMeta(resp.data.meta.pagination)
+        }, 500);
       } else {
         alert('failed to fetch')
       }
@@ -29,7 +31,7 @@ const Categories = () => {
 
   useEffect(() => {
     getData()
-  }, [data])
+  }, [])
 
   return (
     <div>
@@ -48,6 +50,7 @@ const Categories = () => {
             </div>
 
             <div className='row py-3 mb-1'>
+
               {data && data.map(item => {
                 const datas = item.attributes
                 let i = 0
