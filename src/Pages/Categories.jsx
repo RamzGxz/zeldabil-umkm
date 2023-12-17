@@ -19,7 +19,6 @@ const Categories = () => {
       if (resp.status === 200) {
         setData(resp.data.data)
         setMeta(resp.data.meta.pagination)
-        console.log(data)
       } else {
         alert('failed to fetch')
       }
@@ -30,8 +29,7 @@ const Categories = () => {
 
   useEffect(() => {
     getData()
-    console.log(data)
-  }, [])
+  }, [data])
 
   return (
     <div>
