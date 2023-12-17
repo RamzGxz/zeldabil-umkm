@@ -65,7 +65,7 @@ const Home = () => {
             <div className='px-4 fs-6 fw-bolder py-2 rounded-3 position-absolute top-0 start-50 translate-middle-x shadow z-2' style={{
               backgroundColor: Colors.green,
               color: "white"
-            }}>KETEGORI</div>
+            }}>KATEGORI</div>
             <div className='w-100 d-flex justify-content-center align-items-center rounded-5 py-4 flex-column ' style={{
               height: "100vh"
             }}>
